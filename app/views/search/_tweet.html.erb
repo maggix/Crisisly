@@ -1,0 +1,16 @@
+<div class="tweet" id="<%= this.web_id %>" style="display:none;">
+	<div class="tweet-img">
+		<a href="http://twitter.com/<%= this.account %>" title="Follow <%= this.account %>">
+		<img src="<%= this.imgurl %>" alt="<%= this.account %>" />
+		</a>
+		
+	</div>
+
+	<div class="tweet-text">
+		<div class="tweet-meta">
+			<strong><%= this.account %></strong> - relevance score <%= this.pure_score %>
+		</div>
+		<%= this.html.html_safe %>
+	</div>
+	
+</div>

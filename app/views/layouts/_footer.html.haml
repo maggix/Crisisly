@@ -1,0 +1,17 @@
+
+	
+
+#browser-top-right
+	%a{:href => "https://twitter.com/share", :class => "twitter-share-button", "data-text" => @tweet_text, "data-via" => "crisisly", "data-related" => @tweet_should_follow.join(","), "data-hashtags" => @tweet_tags}
+
+#browser-bottom-right
+	= link_to "about", about_path
+	|
+	= link_to "home", root_path
+	|
+	- if logged_in?
+		= current_user.to_s
+		|
+		= link_to "logout", logout_path
+	- else
+		= link_to "login with Twitter", "/login"

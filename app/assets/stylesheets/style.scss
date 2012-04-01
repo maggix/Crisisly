@@ -1,0 +1,543 @@
+// This file must be imported before loading html5-boilerplate
+
+$base-font-family: unquote('\'Open Sans\', sans-serif');  // default font-family
+
+$toolbar-background-color: #333;
+
+$base-color: #f6f6f6;
+
+$highlight-color: #0175C4;
+
+$header-font-family: unquote('\'Vollkorn\', \'Open Sans\', sans-serif');  // default font-family
+
+$base-font-size: 15px;  // default font-size for YUI fonts
+
+$base-line-height: 1.4;  // default line-height for YUI fonts
+
+$font-color: #111;
+
+$link-color: #607890;
+
+$link-hover-color: #036;
+
+$link-active-color: #607890;
+
+$link-visited-color: #607890;
+
+$selected-font-color: #fff;  // color for selected text
+
+$selected-background-color: #ff5E99;  // bg-color for selected text
+
+$list-left-margin: 2em;  // left margin for ul an ol
+
+// Then we'll import the compass extension
+@import "html5-boilerplate";
+
+// Now, you can simply include everything
+// (except media) by uncommeting this line
+@include html5-boilerplate;
+
+// Or, you can pick and choose only the sections
+// you want by using the these includes
+//@include html5-boilerplate-reset;
+//@include html5-boilerplate-fonts;
+//@include html5-boilerplate-styles;
+//@include html5-boilerplate-helpers;
+
+
+
+// Finally, put your own styles in these partials
+// and add more as needed (i.e. forms, tables, nav)
+// font-face fonts
+// see http://compass-style.org/docs/reference/compass/css3/font_face/
+
+@import "compass";
+
+@import 'recipes';
+
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+
+body, select, input, textarea, #jqt {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  font-family: $base-font-family;
+  font-weight: 300;
+}
+
+//Headers (h1, h2, etc) have no default font-size or margin; define those yourself
+h1, h2, h3, h4, h5, h6 {
+  // Bold might not be the best choice if you are
+  // embedding a @font-face that's already bold
+  font-weight: 400;
+  font-family: $header-font-family;
+}
+
+a, a:active, a:visited { color: $link-color; text-decoration: none;  }
+a:hover { color: $link-hover-color; text-decoration: none; }
+
+strong, th {
+  font-weight: bold;
+}
+
+small {
+  // Use font-size mixin to convert to percentage for YUI
+  // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
+  @include font-size(11px);  // approx 85% when base-font-size eq 13px
+}
+
+// Add the 'required' attribute on your
+// inputs if you want to use these
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid {
+  @include border-radius(1px);
+  @include single-box-shadow(red, 0, 0, 5px, 0);
+}
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+body {
+  background: #fff;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: lighten($font-color, 20%);
+}
+
+ul {
+  li {
+    margin-bottom: 0.3em;
+  }
+}
+
+#container {}
+
+header {
+  background: $toolbar-background-color;
+  color: #f6f6f6;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  @include background-image(
+    linear-gradient(rgba(#fff, .15), rgba(#fff, 0)),
+    glossy-gradient($toolbar-background-color, $contrast: .6)
+  );
+  @include box-shadow(rgba(#000, .3) 0 1px 6px);
+  z-index: 9998;
+}
+
+#main {
+  width: 100%;
+  margin: 5em auto 1em auto;
+  min-height: 500px;
+}
+
+#main-inner {
+  margin: 0em;
+}
+
+
+footer {
+  clear:both;
+  text-align:center;
+}
+
+h1 {
+  font-size: 1.7em;
+
+}
+
+.title-extra {
+  display:none;
+}
+
+#page-title {
+  text-align: center;
+  margin: 0.3em auto;
+  text-overflow: ellipsis;
+
+}
+
+#sign-in {
+  display:none;
+}
+
+#browser-top-right {
+  display:none;
+}
+
+#browser-bottom-right {
+  display:none;
+}
+
+#incoming {
+
+  border-collapse:collapse;
+}
+
+.rank, #archive {
+  display: table;
+  width:100%;
+}
+
+.tweet {
+  display: none;
+  clear:both;
+  display:block;
+  border:0;
+  margin:0;
+  padding:0;
+  vertical-align:top;
+  display: table-row;
+  width:100%;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(250,250,250,1)));
+
+
+  .tweet-img {
+    width: 48px;
+    display: table-cell;
+    border-bottom: 1px solid #f2f2f2;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left:0.5em;
+
+  }
+
+  .tweet-img img {
+    @include border-radius(3px);
+    //height: 48px;
+    //width: 48px;
+  }
+
+  .tweet-meta {
+    font-size: 0.8em;
+    padding-bottom: 0.6em;
+    color: lighten($font-color, 15%);
+  }
+
+
+  .tweet-text {
+    margin: auto 0;
+    vertical-align: top;
+    display: block;
+    display: table-cell;
+    padding-left: 1em;
+    padding-right:0.5em;
+    border-bottom: 1px solid #f2f2f2;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+  }
+
+  
+  a, a:active, a:visited { 
+    color: lighten($font-color, 25%);
+    text-decoration: none; 
+  }
+  a:hover { color: lighten($font-color, 10%); text-decoration: none; }
+}
+
+
+
+#strap-line {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.midscreenprompt {
+  text-align:center;
+  padding-top: 2em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#search-box {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#search-box #q {
+  font-size:1.8em;
+  padding: 0em;
+  width: 100%;
+  border: 0;
+
+}
+
+#search-box #q:focus {
+  outline: none;
+}
+
+#search-box #q-box {
+  padding: 1em;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0.6em;
+  -moz-border-radius: 0.6em;
+  border-radius: 0.6em;
+  background: #fff;
+  @include box-shadow(rgba(#000, .2) 0 0px 4px);
+}
+
+#tripartite {
+  margin: 3em auto 0 auto;
+}
+
+.tabcontent {
+  float: left;
+  min-width: 240px;
+  width: 100%;
+  margin-bottom: 2em;
+  h3 {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+#loading-box {
+  position: relative;
+  //width:148px;
+  clear:both;
+  //left: 50%;
+  //margin-left:-74px;
+  padding-top: 2em;
+  p {
+    text-align:center;
+    //float: left;
+    margin: 2em auto;
+  }
+}
+
+.trending-topic {
+  line-height:20px;
+  margin-bottom: 0.2em;
+}
+.trending-topic img {
+  display:inline;
+  vertical-align: bottom;
+}
+
+.button, .button:active .button:visited {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border: 1px solid #009bde;
+  background: #00a4e8;
+  background: -webkit-gradient(linear, left top, left bottom,
+  from(#00b1fc),
+  color-stop(.49, #00a4e8),
+  color-stop(.49,#009bde),
+  to(#0098d9));
+  color: #fff !important;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  padding: 13px 10px 12px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px #333;
+  max-width: 260px;
+  width: 100%;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+
+}
+
+.button:hover {
+  @include box-shadow(rgba(#000, .3) 0 1px 6px);
+}
+
+.navbutton {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border: 1px solid #222;
+  background: #111;
+  background: -webkit-gradient(linear, left top, left bottom,
+  from(#333),
+  color-stop(.49, #333),
+  color-stop(.49,#222),
+  to(#222));
+  color: #fff !important;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  padding: 7px 10px 7px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px #333;
+  max-width: 260px;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#mobile_home {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+}
+
+
+
+
+.home {
+  #main-inner {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+  }
+
+  #mobile_home {
+    display:none;
+  }
+}
+
+.about {
+  p {
+    margin-bottom: 2.1em;
+  }
+}
+
+.notice {
+  margin-bottom:2em;
+  background: #f0f0f0;
+  padding:1em;
+  text-align:center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+//
+// Placeholder media queries for responsive design. Modify as design requires.
+// These follow after, and will override, the primary ('mobile first') styles
+// The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
+//
+
+@media only screen and (min-width: 480px) {
+  // Style adjustments for viewports 480px and over go here
+  #tripartite {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+  }
+
+  .tabcontent {
+    //width: 240px !important;
+    margin-right: 1em;
+    -moz-box-flex: 1.0;
+    -webkit-box-flex: 1.0;
+    box-flex: 1.0;
+    float: none;
+  }
+
+  .tabcontent-last {
+    margin-right:0 !important;
+    display:none;
+  }
+
+  #browser-top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: block;
+    z-index: 9999;
+    color: #fff
+
+  }
+
+  #browser-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 9999;
+    background: #fff;
+    padding:1em;
+
+  }
+}/*/mediaquery*/
+
+@media only screen and (min-width: 768px) {
+  // Style adjustments for viewports 768px and over go here
+  #main {
+    width: 56em;
+    margin: 8em auto 1em auto;
+    min-height: 0;
+  }
+  #strap-line {
+    font-size: 2.1em;
+  }
+
+  #header {
+    background-image: none;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .title-extra {
+    display:inline;
+  }
+  #sign-in {
+    #min-width:56em;
+    display:none;
+  }
+  #main-inner {
+  
+    margin-left:2em;
+    margin-right:2em;
+  }
+
+  #search-box #q {
+    font-size:2em;
+  }
+
+  .tweet {
+    background: #fff;
+  }
+
+  #mobile_home {
+    display:none;
+  }
+
+  .home {
+    .tweet-text {
+      max-width: 200px;
+    }
+  }
+
+  .tabcontent-last {
+    display:block;
+  }
+  
+
+
+
+
+}/*/mediaquery*/
+
+
+// Print styles
+// Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+@media print {
+  @include media-print;
+}

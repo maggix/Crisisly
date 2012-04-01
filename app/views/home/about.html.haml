@@ -1,0 +1,12 @@
+#strap-line So, what's this all about then?
+.about
+	%br
+	%br
+	%p
+		Hi. Crisis.ly started as a weekend hack project, me playing around with some new technologies I wanted to explore, and got to what you see now with me deciding to actually go the last 20% with it and put it out into the real world. I'm <a href="http://www.danhilltech.com/">Dan, co-founder and CTO</a> at <a href="http://www.crashpadder.com">Crashpadder.com</a> - a project we've been working on for about <a href="http://www.crashpadder.com/press">3 years now</a>. 
+	%p
+		Crisis.ly aims to take the realtime Twitter stream for a breaking news story, and instead of displaying tweets chronologically (like a <a href="http://www.google.com/?q=Tweet%20Wall">Tweet Wall</a>) it displays them in a combination of recency and relevance/authority. I built a simple (for now) algorithm to rank a tweet's authority - how many followers they have, how many retweets, it's geographical proximity to other tweets, keyword density, how far you are from them on a Twitter <a href="http://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Bacon_number">Erd&#x0151;s-Bacon</a> graph, and so on.
+	%p
+		On the techie side, it's using <a href="http://rubyonrails.org/">Rails 3.1</a>, <a href="http://nodejs.org/">Node.js</a>, <a href="http://redis.io">Redis</a>, Resque, the Twitter realtime APIs, nginx, EC2, Github, and some other cool things. And no SQL in sight - nice.
+	%p
+		<a href="https://twitter.com/serenestudios" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @serenestudios</a> <a href="https://twitter.com/crisisly" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @crisisly</a>

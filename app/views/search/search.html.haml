@@ -1,0 +1,72 @@
+:javascript
+	$(document).ready(function() {
+		$("#loading").spin("large");
+
+		var socket = io.connect('http://#{request.host}:8080');
+		socket.on('#{@node_channel}', function (data) {
+			datum = $.parseJSON(data['data']);
+			console.log(datum);
+			max_minutes = 5;
+
+			$("#loading-box").hide(function() {
+				$("#loading-box").remove();
+			});
+
+			$("#archive").fadeOut(800, function (){
+				$("#archive").remove();
+
+			});
+
+
+			$("#rank_" + datum['pure_score']).prepend(
+				$("#tweettemplate").jqote( datum )
+			);
+			$("#" + datum['web_id']).fadeIn(1000).delay(parseInt(datum['expire_in']) * max_minutes).fadeOut(2000, function() {
+				$(this).remove();
+			});
+
+		});
+
+
+		(function worker() {
+			$.ajax({
+				url: '#{keep_alive_url(@q)}', 
+				success: function(data) {
+					
+				},
+				complete: function() {
+					setTimeout(worker, 60000);
+				}
+			});
+		})();
+
+		$("#archive .tweet").fadeIn(1000);
+
+		
+
+	});
+
+#loading-box
+	#loading
+	%p 
+		Engaging warp drive...
+		%br
+		= "(Waiting for someone to tweet about #{@q})"
+		- if !logged_in?
+			= link_to "&raquo; login with Twitter for realtime tweets &laquo;".html_safe, "/login"
+
+
+#incoming
+	- 100.times do |i|
+		.rank{:id => "rank_#{100 - i}"}
+
+#archive
+	- @old_tweets.each do |tweet|
+		= render :partial => "tweet", :locals => {:this => ArchiveTweet.new(tweet)}
+
+:erb
+	<script id="tweettemplate" type="text/x-jqote-template">
+		<![CDATA[
+			<%= @template %>
+		]]>
+	</script>

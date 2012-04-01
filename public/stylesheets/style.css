@@ -1,0 +1,1436 @@
+@charset "UTF-8";
+/* line 14, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 23, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 34, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 40, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 42, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 11, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_fonts.scss */
+body {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+  *font-size: small;
+}
+
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_fonts.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 15, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+ul, ol {
+  margin-left: 2em;
+}
+
+/* line 18, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  bottom: -0.25em;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+}
+
+/* line 53, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 58, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+/* line 71, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 80, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+button, input, select, textarea {
+  width: auto;
+  overflow: visible;
+  margin: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  vertical-align: baseline;
+}
+
+/* line 84, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+textarea {
+  overflow: auto;
+  vertical-align: text-top;
+}
+
+/* line 88, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 99, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+::-moz-selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 100, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+::selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 105, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+a:link {
+  -webkit-tap-highlight-color: #ff5e99;
+}
+
+/* line 118, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 120, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 125, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 10, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.ir {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
+  background-repeat: no-repeat;
+}
+
+/* line 12, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 14, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 50, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 16, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 61, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 62, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_helpers.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * Background noise recipe
+ * 
+ * This recipe use a sass function to generate a .png file
+ * 
+ * Inspired by a jQuery plugin "Noisy" by Daniel Rapp @DanielRapp
+ * @link https://github.com/DanielRapp/Noisy
+ * 
+ * Converted using Sass by Aaron Russell @aaronrussell & Philipp Bosch @philippbosch
+ * @link https://gist.github.com/1021332
+ * 
+ * Ported to a sass gem by Antti Salonen @antsa
+ * @link https://github.com/antsa/sassy_noise
+ * 
+ * Mixin:        background-noise
+ * Function:     background_noise
+ * 
+ * @author Daniel Rapp @DanielRapp
+ * @author Aaron Russell @aaronrussell
+ * @author Philipp Bosch @philippbosch
+ * @author Antti Salonen @antsa
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ *
+ * @class Gradients
+ * @author David Kaneda http://www.davidkaneda.com/
+ *
+ */
+/**
+ * Adds a background gradient into a specified selector.
+ * 
+ *     @include background-gradient(#444, 'glossy');
+ * 
+ * You can also use color-stops if you want full control of the gradient:
+ * 
+ *     @include background-gradient(#444, color-stops(#333, #222, #111));
+ * 
+ * @param {color} $bg-color
+ * The base color of the gradient.
+ * 
+ * @param {string/list} $type
+ * The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or linear:
+ *
+ *     @include background-gradient(red, 'glossy');
+ *
+ * It can also accept a list of color-stop values:;
+ * 
+ *     @include background-gradient(black, color-stops(#333, #111, #000));
+ * 
+ * @param {string} $direction
+ * The direction of the gradient.
+ */
+/**
+ * Blueprint grid background pattern
+ * 
+ * @link http://lea.verou.me/css3patterns/#blueprint-grid
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx for the sass mixin
+ */
+/**
+ * Background overlay inspired by Google Chrome modal overlay
+ * 
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+ */
+/**
+ * Striped background pattern
+ * 
+ * @link http://lea.verou.me/css3patterns/
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author David Kaneda http://www.davidkaneda.com @davidkaneda for the sass mixin
+ */
+/**
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#tartan
+ *
+ * @author Marta Armada http://swwweet.com/ for the original pattern
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx for the sass mixin
+ */
+/**
+ * Carbon Fiber background pattern
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author David Kaneda http://www.davidkaneda.com/ for the Sass mixin
+ *
+ * @link http://lea.verou.me/css3patterns/
+ *
+ */
+/**
+ * Normalize.css
+ * Opposite approche from CSS reset
+ * 
+ * Based on normalize.css commit 9576d48fc234c5224b1fc4dccba2f5965243843d
+ *
+ * @link http://github.com/necolas/normalize.css
+ */
+/* normalize.css 2011-07-12T10:51 UTC · http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+/* =============================================================================
+   Base
+   ========================================================================== */
+/* =============================================================================
+   Links
+   ========================================================================== */
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/**
+ *
+ * @author David Kaneda - http://www.davidkaneda.com
+ *
+ */
+/**
+ * @class Color
+ */
+/**
+ * Returns the brightness (out of 100) of a specified color.
+ * @todo explain why this is useful
+ * @param {color} $color The color you want the brightness value of
+ * @return {measurement}
+ */
+/**
+ * Returns the luminosity for a specified color
+ * @todo explain why this is useful
+ * @param {color} The color to check
+ * @return {measurement}
+ */
+/**
+ * Glass effect
+ * Use this on image for better effect render
+ * 
+ * Inspired from Simurai's IMDB redisign
+ *
+ * @link http://lab.simurai.com/redesign/imdb
+ * @thanks Simurai @simurai
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+/**
+ * Scotch tape effect with pure CSS
+ * 
+ * @thanks Nick La @nickla for original concept
+ * @link http://webdesignerwall.com/tutorials/css3-image-styles
+ * 
+ * @author David Kaneda http://www.davidkaneda.com
+ *
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+/**
+ * Corner folded with pure CSS
+ * 
+ * Known support: Firefox 3.5+, Chrome 4+, Safari 4+, Opera 10+, IE 9+.
+ * IE8 is not supported because it not render properly box-shadow and
+ * pseudo element should be selected with ::element and not :element
+ * 
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/
+ * @todo Nix in .4
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+/**
+ * Corner folded with pure CSS
+ * 
+ * Known support: Firefox 3.5+, Chrome 4+, Safari 4+, Opera 10+, IE 9+.
+ * IE8 is not supported because it not render properly box-shadow and
+ * pseudo element should be selected with ::element and not :element
+ * 
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+/**
+ * Form element inline mixin
+ * This mixin allow you to have a label inline with your input
+ * It's simply based on inline-block behavior
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Vertical alignement for page
+ * Inspired by http://css-tricks.com/snippets/css/center-div-with-dynamic-height/
+ * 
+ * Usage:
+ * 
+ * SCSS
+ * @include vertical-align-requirement;
+ * .v-align-container { @include vertical-align-container }
+ * .v-align-content-container { @include vertical-align-content-container }
+ * .v-align-content { @include vertical-align-content }
+ * 
+ * HTML
+ * <body>
+ *     <div class="v-align-container">
+ *         <div class="v-align-content-container">
+ *             <div class="v-align-content">
+ *             Your content !
+ *             </div>
+ *         </div> 
+ *     </div>
+ * </body>
+ *
+ * @thanks Chris Coyier @chriscoyier
+ * @autor Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Media Queries Mixins
+ * 
+ * @todo Do we have to take care of print ?
+ * 
+ * @require sass-3.2 (you need eventually to do "sudo gem install sass --pre")
+ * @author Maxime Thirouin <maxime.thirouin@gmail.com>
+ */
+/*
+$media-query-width-big: 1280px;
+$media-query-width-medium: 960px;
+$media-query-width-small: 480px;
+*/
+/**
+ * Drop shadow mixins from Nicolas Gallagher demo
+ * 
+ * @thanks Nicolas Gallagher @necolas, @simurai, @cameronmoll, @matthamm
+ * 
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow curled
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow curved
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow flying
+ *
+ * @thanks Geoffrey Crofte @geoffrey_crofte
+ * @link http://www.creativejuiz.fr/trytotry/css3-box-shadow-after-before/
+ */
+/**
+ * Drop shadow w/ lifted corners
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow w/ perspective
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow raised
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow rules required for transform on drop shadow
+ * 
+ * /!\ This is required if you want to apply some transform on the element using drop shadow
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Shadow along the top edge of the browser viewport
+ * 
+ * @link http://playground.genelocklin.com/depth/
+ */
+/**
+* Shapes !
+* Polygons, ellipses and symbols
+* 
+* @thanks Chris Coyier @chriscoyier
+* @link http://css-tricks.com/examples/ShapesOfCSS/
+* @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+*/
+/**
+ * Shape/Ellipse
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Hexagon
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Octagon
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Parallelogram
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Pentagon
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Rectangle
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Rhombus
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Square
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Star
+ *
+ * @todo check if setting a z-index by default is a good thing
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Trapezoid
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Triangle
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol/Diamond
+ *
+ * @todo add height support
+ * 
+ * @author Alexander Futekov
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol/Egg
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol/Heart
+ * 
+ * @author Nicolas Gallagher @necolas
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol/Infinity
+ * 
+ * @author Nicolas Gallagher @necolas
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol/Pacman
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Symbol/Yin-yang
+ *
+ * @author Alexander Futekov
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Micro clearfix hack
+ * 
+ * The clearfix hack is a popular way to clear floats without resorting to using presentational markup. This article presents an update to the clearfix method that further reduces the amount of CSS required.
+ * Known support: Firefox 2+, Safari 2+, Chrome, Opera 9.27+, IE 6+, IE Mac.
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+/**
+ * UI convex effect from one color
+ *
+ * @todo merge with ui-button ?
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * UI Glossy helper
+ *
+ * @deprecated
+ * @todo Remove in 0.4
+ * @see background/gradients
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * UI simple gradient from one color
+ *
+ * @todo merge with ui-button ?
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Shape/Polygon/Triangle
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ * Keyboard key touch
+ * A simple stylesheet for rendering beautiful keyboard-style elements.
+
+ * @author Michael Hüneburg http://michaelhue.com/keyscss
+ * @link https://github.com/michaelhue/keyscss (commit 76bb603e921d0145362e0f60eabb79d4f69cbda0)
+ *
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+*/
+/**
+ * Menu dropdown helper
+ *
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+*/
+/**
+ * Ui background overlay inspired by Google Chrome modal overlay
+ * 
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+ */
+/**
+ * Background overlay inspired by Google Chrome modal overlay
+ * 
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+ */
+/**
+ * <hr /> separator style
+ *
+ * @author Chris Coyier @chriscoyier
+ * @link http://jsfiddle.net/chriscoyier/GaEzp/35/
+ *
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+ */
+/**
+ * Micro clearfix hack
+ * 
+ * The clearfix hack is a popular way to clear floats without resorting to using presentational markup. This article presents an update to the clearfix method that further reduces the amount of CSS required.
+ * Known support: Firefox 2+, Safari 2+, Chrome, Opera 9.27+, IE 6+, IE Mac.
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+/**
+ *
+ * @class Gradients
+ * @author David Kaneda http://www.davidkaneda.com/
+ *
+ */
+/**
+ * Adds a background gradient into a specified selector.
+ * 
+ *     @include background-gradient(#444, 'glossy');
+ * 
+ * You can also use color-stops if you want full control of the gradient:
+ * 
+ *     @include background-gradient(#444, color-stops(#333, #222, #111));
+ * 
+ * @param {color} $bg-color
+ * The base color of the gradient.
+ * 
+ * @param {string/list} $type
+ * The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or linear:
+ *
+ *     @include background-gradient(red, 'glossy');
+ *
+ * It can also accept a list of color-stop values:;
+ * 
+ *     @include background-gradient(black, color-stops(#333, #111, #000));
+ * 
+ * @param {string} $direction
+ * The direction of the gradient.
+ */
+/**
+ * @class Webfont Icon
+ * Great to use with the [Pictos font](http://pictos.drewwilson.com/)
+ * 
+ */
+/**
+ * @cfg {color} $webfont-icon-base-color
+ * The default color of icons when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `white`.
+ */
+/**
+ * @cfg {color} $webfont-icon-default-stroke
+ * The default color to use on the border of icons, when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `null`.
+ */
+/**
+ * @cfg {string} $webfont-icon-default-gradient
+ * The default gradient to use when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `matte`.
+ */
+/* line 41, ../../../../../.rvm/gems/ruby-1.9.3-p0/bundler/gems/compass-recipes-a9df1676f8e2/stylesheets/recipes/_webfont-icon.scss */
+.webfont-icon-base {
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+  text-shadow: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+/**
+ * Includes a character into the specified selector, styled as an icon.
+ * 
+ *     @include webfont-icon('a');
+ * 
+ * @param {color} $color
+ * The color of the icon. Defaults to {@link #$webfont-icon-default-background $webfont-icon-default-background}.
+ * 
+ * @param {measurement} $size
+ * The size of the icon
+ * 
+ * @param {color} $stroke
+ * The color of the border. Defautls to {@link #$webfont-icon-default-border $webfont-icon-default-border}.
+ * 
+ * @param {boolean} $include-staes
+ * True to include states for hover and active. Defaults to `true`.
+ */
+/* line 64, ../../app/assets/stylesheets/style.scss */
+body, select, input, textarea, #jqt {
+  color: #111111;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* line 72, ../../app/assets/stylesheets/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: 'Vollkorn', 'Open Sans', sans-serif;
+}
+
+/* line 79, ../../app/assets/stylesheets/style.scss */
+a, a:active, a:visited {
+  color: #607890;
+  text-decoration: none;
+}
+
+/* line 80, ../../app/assets/stylesheets/style.scss */
+a:hover {
+  color: #003366;
+  text-decoration: none;
+}
+
+/* line 82, ../../app/assets/stylesheets/style.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 86, ../../app/assets/stylesheets/style.scss */
+small {
+  font-size: 74%;
+}
+
+/* line 95, ../../app/assets/stylesheets/style.scss */
+input:invalid, textarea:invalid {
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-shadow: 0 0 5px 0 red;
+  -webkit-box-shadow: 0 0 5px 0 red;
+  -o-box-shadow: 0 0 5px 0 red;
+  box-shadow: 0 0 5px 0 red;
+}
+
+/* line 100, ../../app/assets/stylesheets/style.scss */
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 107, ../../app/assets/stylesheets/style.scss */
+body {
+  background: #fff;
+}
+
+/* line 111, ../../app/assets/stylesheets/style.scss */
+h3 {
+  font-size: 1.3em;
+  color: #444444;
+}
+
+/* line 117, ../../app/assets/stylesheets/style.scss */
+ul li {
+  margin-bottom: 0.3em;
+}
+
+/* line 124, ../../app/assets/stylesheets/style.scss */
+header {
+  background: #333333;
+  color: #f6f6f6;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4a4a4a), color-stop(50%, #3b3b3b), color-stop(51%, #333333), color-stop(100%, #2b2b2b));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), -webkit-linear-gradient(top, #4a4a4a, #3b3b3b 50%, #333333 51%, #2b2b2b);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), -moz-linear-gradient(top, #4a4a4a, #3b3b3b 50%, #333333 51%, #2b2b2b);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), -o-linear-gradient(top, #4a4a4a, #3b3b3b 50%, #333333 51%, #2b2b2b);
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), -ms-linear-gradient(top, #4a4a4a, #3b3b3b 50%, #333333 51%, #2b2b2b);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), linear-gradient(top, #4a4a4a, #3b3b3b 50%, #333333 51%, #2b2b2b);
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  z-index: 9998;
+}
+
+/* line 138, ../../app/assets/stylesheets/style.scss */
+#main {
+  width: 100%;
+  margin: 5em auto 1em auto;
+  min-height: 500px;
+}
+
+/* line 144, ../../app/assets/stylesheets/style.scss */
+#main-inner {
+  margin: 0em;
+}
+
+/* line 149, ../../app/assets/stylesheets/style.scss */
+footer {
+  clear: both;
+  text-align: center;
+}
+
+/* line 154, ../../app/assets/stylesheets/style.scss */
+h1 {
+  font-size: 1.7em;
+}
+
+/* line 159, ../../app/assets/stylesheets/style.scss */
+.title-extra {
+  display: none;
+}
+
+/* line 163, ../../app/assets/stylesheets/style.scss */
+#page-title {
+  text-align: center;
+  margin: 0.3em auto;
+  text-overflow: ellipsis;
+}
+
+/* line 170, ../../app/assets/stylesheets/style.scss */
+#sign-in {
+  display: none;
+}
+
+/* line 174, ../../app/assets/stylesheets/style.scss */
+#browser-top-right {
+  display: none;
+}
+
+/* line 178, ../../app/assets/stylesheets/style.scss */
+#browser-bottom-right {
+  display: none;
+}
+
+/* line 182, ../../app/assets/stylesheets/style.scss */
+#incoming {
+  border-collapse: collapse;
+}
+
+/* line 187, ../../app/assets/stylesheets/style.scss */
+.rank, #archive {
+  display: table;
+  width: 100%;
+}
+
+/* line 192, ../../app/assets/stylesheets/style.scss */
+.tweet {
+  display: none;
+  clear: both;
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  display: table-row;
+  width: 100%;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#fafafa));
+}
+/* line 205, ../../app/assets/stylesheets/style.scss */
+.tweet .tweet-img {
+  width: 48px;
+  display: table-cell;
+  border-bottom: 1px solid #f2f2f2;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+/* line 215, ../../app/assets/stylesheets/style.scss */
+.tweet .tweet-img img {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 221, ../../app/assets/stylesheets/style.scss */
+.tweet .tweet-meta {
+  font-size: 0.8em;
+  padding-bottom: 0.6em;
+  color: #373737;
+}
+/* line 228, ../../app/assets/stylesheets/style.scss */
+.tweet .tweet-text {
+  margin: auto 0;
+  vertical-align: top;
+  display: block;
+  display: table-cell;
+  padding-left: 1em;
+  padding-right: 0.5em;
+  border-bottom: 1px solid #f2f2f2;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/* line 242, ../../app/assets/stylesheets/style.scss */
+.tweet a, .tweet a:active, .tweet a:visited {
+  color: #515151;
+  text-decoration: none;
+}
+/* line 246, ../../app/assets/stylesheets/style.scss */
+.tweet a:hover {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+/* line 251, ../../app/assets/stylesheets/style.scss */
+#strap-line {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* line 256, ../../app/assets/stylesheets/style.scss */
+.midscreenprompt {
+  text-align: center;
+  padding-top: 2em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* line 263, ../../app/assets/stylesheets/style.scss */
+#search-box {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* line 268, ../../app/assets/stylesheets/style.scss */
+#search-box #q {
+  font-size: 1.8em;
+  padding: 0em;
+  width: 100%;
+  border: 0;
+}
+
+/* line 276, ../../app/assets/stylesheets/style.scss */
+#search-box #q:focus {
+  outline: none;
+}
+
+/* line 280, ../../app/assets/stylesheets/style.scss */
+#search-box #q-box {
+  padding: 1em;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0.6em;
+  -moz-border-radius: 0.6em;
+  border-radius: 0.6em;
+  background: #fff;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0px 4px;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 0px 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0px 4px;
+}
+
+/* line 290, ../../app/assets/stylesheets/style.scss */
+#tripartite {
+  margin: 3em auto 0 auto;
+}
+
+/* line 294, ../../app/assets/stylesheets/style.scss */
+.tabcontent {
+  float: left;
+  min-width: 240px;
+  width: 100%;
+  margin-bottom: 2em;
+}
+/* line 299, ../../app/assets/stylesheets/style.scss */
+.tabcontent h3 {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 305, ../../app/assets/stylesheets/style.scss */
+#loading-box {
+  position: relative;
+  clear: both;
+  padding-top: 2em;
+}
+/* line 312, ../../app/assets/stylesheets/style.scss */
+#loading-box p {
+  text-align: center;
+  margin: 2em auto;
+}
+
+/* line 319, ../../app/assets/stylesheets/style.scss */
+.trending-topic {
+  line-height: 20px;
+}
+
+/* line 322, ../../app/assets/stylesheets/style.scss */
+.trending-topic img {
+  display: inline;
+  vertical-align: bottom;
+}
+
+/* line 327, ../../app/assets/stylesheets/style.scss */
+.button, .button:active .button:visited {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border: 1px solid #009bde;
+  background: #00a4e8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00b1fc), color-stop(0.49, #00a4e8), color-stop(0.49, #009bde), to(#0098d9));
+  color: #fff !important;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  padding: 13px 10px 12px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px #333;
+  max-width: 260px;
+  width: 100%;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* line 359, ../../app/assets/stylesheets/style.scss */
+.button:hover {
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+}
+
+/* line 363, ../../app/assets/stylesheets/style.scss */
+.navbutton {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border: 1px solid #222;
+  background: #111;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333333), color-stop(0.49, #333333), color-stop(0.49, #222222), to(#222222));
+  color: #fff !important;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  padding: 7px 10px 7px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px #333;
+  max-width: 260px;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* line 393, ../../app/assets/stylesheets/style.scss */
+#mobile_home {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+}
+
+/* line 403, ../../app/assets/stylesheets/style.scss */
+.home #main-inner {
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+}
+/* line 408, ../../app/assets/stylesheets/style.scss */
+.home #mobile_home {
+  display: none;
+}
+
+/* line 414, ../../app/assets/stylesheets/style.scss */
+.about p {
+  margin-bottom: 2.1em;
+}
+
+/* line 419, ../../app/assets/stylesheets/style.scss */
+.notice {
+  margin-bottom: 2em;
+  background: #f0f0f0;
+  padding: 1em;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 437, ../../app/assets/stylesheets/style.scss */
+  #tripartite {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+  }
+
+  /* line 443, ../../app/assets/stylesheets/style.scss */
+  .tabcontent {
+    margin-right: 1em;
+    -moz-box-flex: 1.0;
+    -webkit-box-flex: 1.0;
+    box-flex: 1.0;
+    float: none;
+  }
+
+  /* line 452, ../../app/assets/stylesheets/style.scss */
+  .tabcontent-last {
+    margin-right: 0 !important;
+    display: none;
+  }
+
+  /* line 457, ../../app/assets/stylesheets/style.scss */
+  #browser-top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: block;
+    z-index: 9999;
+    color: white;
+  }
+
+  /* line 467, ../../app/assets/stylesheets/style.scss */
+  #browser-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 9999;
+    background: #fff;
+    padding: 1em;
+  }
+}
+/*/mediaquery*/
+@media only screen and (min-width: 768px) {
+  /* line 481, ../../app/assets/stylesheets/style.scss */
+  #main {
+    width: 56em;
+    margin: 8em auto 1em auto;
+    min-height: 0;
+  }
+
+  /* line 486, ../../app/assets/stylesheets/style.scss */
+  #strap-line {
+    font-size: 2.1em;
+  }
+
+  /* line 490, ../../app/assets/stylesheets/style.scss */
+  #header {
+    background-image: none;
+  }
+
+  /* line 493, ../../app/assets/stylesheets/style.scss */
+  h1 {
+    font-size: 3em;
+  }
+
+  /* line 496, ../../app/assets/stylesheets/style.scss */
+  .title-extra {
+    display: inline;
+  }
+
+  /* line 499, ../../app/assets/stylesheets/style.scss */
+  #sign-in {
+    #min-width: 56em;
+    display: none;
+  }
+
+  /* line 503, ../../app/assets/stylesheets/style.scss */
+  #main-inner {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  /* line 509, ../../app/assets/stylesheets/style.scss */
+  #search-box #q {
+    font-size: 2em;
+  }
+
+  /* line 513, ../../app/assets/stylesheets/style.scss */
+  .tweet {
+    background: #fff;
+  }
+
+  /* line 517, ../../app/assets/stylesheets/style.scss */
+  #mobile_home {
+    display: none;
+  }
+
+  /* line 522, ../../app/assets/stylesheets/style.scss */
+  .home .tweet-text {
+    max-width: 200px;
+  }
+
+  /* line 527, ../../app/assets/stylesheets/style.scss */
+  .tabcontent-last {
+    display: block;
+  }
+}
+/*/mediaquery*/
+@media print {
+  /* line 10, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 12, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 13, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 14, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 15, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 16, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 18, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 19, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 21, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p0/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_media.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

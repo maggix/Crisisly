@@ -1,0 +1,41 @@
+#strap-line
+	Realtime social news, filtered for accuracy and quality
+
+#search-box
+	= form_tag(search_router_path) do
+		#q-box
+			= text_field_tag(:q, nil, :placeholder => "Search...")
+
+#tripartite
+	.tabcontent
+		%h3 Trending Now
+		- @trending.each do |trend, trackers|
+			%p.trending-topic
+				= link_to trend, search_path(trend)
+				= " - " 
+				- trackers.each do |tracker|
+					~ link_to image_tag(tracker.profile_image_url, :size => "20x20"), "http://twitter.com/#{tracker.screen_name}", :target => "_blank"
+	.tabcontent
+		%h3 Explore News
+		- @feed[0..4].each do |item|
+			- unless extract_hashtags(item.title).count == 0
+				.tweet
+					.tweet-img
+						= link_to image_tag(item.links.second), search_path("#" + extract_hashtags(item.title).first)
+					.tweet-text
+						= crisisly_link item.title
+	.tabcontent.tabcontent-last
+		%h3 About
+		%p 
+			Crisis.ly is a tool to filter the Twitter firehose by relevance and importance, rather than purely chronologically. It is built by 
+			= link_to("Dan Hill", "http://twitter.com/serenestudios") + "," 
+			= link_to "CTO at Crashpadder.com", "http://www.crashpadder.com"
+			in a few weekends, as a way to play with some new toys:
+		%br
+		%ul 
+			%li Rails 3.1
+			%li HTML5
+			%li Responsive design
+			%li Node.js
+			%li realtime Twitter APIs.
+		%p= link_to "Read more &raquo;".html_safe, about_path

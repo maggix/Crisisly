@@ -1,0 +1,6 @@
+curl http://npmjs.org/install.sh | sudo sh
+ 
+sudo npm install redis
+sudo npm install socket.io
+sudo npm install express
+sudo npm install jade
