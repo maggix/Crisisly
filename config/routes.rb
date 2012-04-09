@@ -61,7 +61,7 @@ Newsly::Application.routes.draw do
   twitter_endpoint = twitter.login_handler(:return_to => '/twitter-return')
 
   mount twitter_endpoint => 'login', :as => :login
-  mount Resque::Server.new, :at => "/resque"
+  #mount Resque::Server.new, :at => "/resque"
 
   match "twitter-return" => "home#twitter_return"
   match "logout" => "home#twitter_logout", :as => "logout"
