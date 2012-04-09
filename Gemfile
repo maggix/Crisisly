@@ -15,6 +15,9 @@ gem 'compass-recipes', :git => "git://github.com/senchalabs/compass-recipes.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+gem "resque"
+gem "resque-pool"
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
   gem 'coffee-rails', '~> 3.1.1'
@@ -55,8 +58,6 @@ gem "html5-boilerplate"
 gem "tweetstream"
 gem "twitter-text"
 
-gem "resque"
-gem "resque-pool"
 #gem "resque-scheduler"
 gem "redis-store"
 #gem 'redis-rack-cache'
