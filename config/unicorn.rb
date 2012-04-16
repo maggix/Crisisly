@@ -62,6 +62,11 @@ before_fork do |server, worker|
   end
 end
 
+
+before_exec do |server|
+  ENV['BUNDLE_GEMFILE'] = "/home/ubuntu/crisisly/current/Gemfile"
+end
+
 after_fork do |server, worker|
   # the following is *required* for Rails + "preload_app true",
   
