@@ -47,7 +47,7 @@ group :test do
 end
 
 gem 'execjs'
-gem 'therubyracer'
+#gem 'therubyracer'
 #gem "hiredis", "~> 0.3.1" #GM 20131012
 #gem "redis", "~> 2.2.0", :require => ["redis/connection/hiredis", "redis"]  #GM 20131012
 #gem "ohm"
