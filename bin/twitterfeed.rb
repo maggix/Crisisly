@@ -28,7 +28,7 @@ def process_exists?(pid)
 	end
 end
 
-Ohm.connect(:url => "redis://127.0.0.1:6379/0")
+Ohm.connect(:url => ENV["REDISCLOUD_URL"])
 REDIS = Ohm.redis
 
 REDIS.subscribe "workers" do |on|
