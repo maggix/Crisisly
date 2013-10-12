@@ -62,3 +62,5 @@ Newsly::Application.configure do
 end
 
 
+Ohm.connect(:url => ENV["REDISCLOUD_URL"])
+REDIS = Ohm.redis
