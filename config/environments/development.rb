@@ -27,6 +27,11 @@ Newsly::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Cache store for development
+  config.cache_store = :redis_store, "redis://127.0.0.1:6379/1"
+
+
 end
 
 Ohm.connect(:url => "redis://127.0.0.1:6379/0")

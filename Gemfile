@@ -48,9 +48,12 @@ end
 
 gem 'execjs'
 gem 'therubyracer'
-gem "hiredis", "~> 0.3.1"
-gem "redis", "~> 2.2.0", :require => ["redis/connection/hiredis", "redis"]
-gem "ohm"
+#gem "hiredis", "~> 0.3.1" #GM 20131012
+#gem "redis", "~> 2.2.0", :require => ["redis/connection/hiredis", "redis"]  #GM 20131012
+#gem "ohm"
+gem 'memcachier'
+gem 'dalli'
+
 
 gem 'twitter-login', '~> 0.4.1', :require => 'twitter/login'
 
