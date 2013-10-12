@@ -11,6 +11,9 @@
 .idea 
 /.idea
 
+#ignore env
+.env
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
